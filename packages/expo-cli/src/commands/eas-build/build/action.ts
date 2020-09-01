@@ -24,6 +24,7 @@ import {
 } from '../types';
 import createBuilderContext from '../utils/createBuilderContext';
 import createCommandContextAsync from '../utils/createCommandContextAsync';
+import { isUpdatesConfigured } from '../utils/expoUpdates';
 import {
   ensureGitRepoExistsAsync,
   ensureGitStatusIsCleanAsync,
@@ -164,6 +165,12 @@ async function startBuildAsync<T extends Platform>(
     }
     if (!builder.ctx.commandCtx.skipProjectConfiguration) {
       try {
+        if (!(await isUpdatesConfigured(builder.ctx.commandCtx.projectDir))) {
+          throw new Error(
+            '"expo-updates" is installed in the project, but the configuration is not up-to-date. Please run "expo eas:build:init" first to configure the project'
+          );
+        }
+
         await builder.ensureProjectConfiguredAsync();
         Analytics.logEvent(
           AnalyticsEvent.CONFIGURE_PROJECT_SUCCESS,
