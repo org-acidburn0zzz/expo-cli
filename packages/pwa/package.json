@@ -38,7 +38,7 @@
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "@expo/config": "3.3.0",
+    "@expo/config": "3.3.6",
     "@expo/image-utils": "0.3.5",
     "@expo/json-file": "8.2.22",
     "chalk": "^4.0.0",
