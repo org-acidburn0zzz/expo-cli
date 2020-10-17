@@ -44,6 +44,6 @@
     "chalk": "^4.0.0",
     "commander": "2.20.0",
     "fs-extra": "9.0.0",
-    "update-check": "1.5.3"
+    "update-check": "1.5.4"
   }
 }
