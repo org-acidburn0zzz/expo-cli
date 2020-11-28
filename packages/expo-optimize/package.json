@@ -33,7 +33,7 @@
     "clean": "rimraf ./build/"
   },
   "dependencies": {
-    "@expo/config": "3.3.0"
+    "@expo/config": "3.3.16"
   },
   "devDependencies": {
     "@expo/babel-preset-cli": "0.2.17",
