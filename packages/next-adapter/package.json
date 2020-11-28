@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@expo/package-manager": "0.0.31",
-    "@expo/webpack-config": "0.12.29",
+    "@expo/webpack-config": "0.12.46",
     "@types/next": "^8.0.6",
     "chalk": "^4.0.0",
     "commander": "^4.0.1",
